@@ -1,4 +1,4 @@
-//exercicio1
+//exercício1
     /* 
         Crie uma função que dado o objeto a seguir: 
 
