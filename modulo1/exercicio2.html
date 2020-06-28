@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <script>
+        //exercicio2
+            //usando for
+                function pares(x, y) {
+                    for(i = x; i <= y; i++) {
+                        if(i % 2 === 0) {
+                            console.log(i);
+                        };
+                    };
+                }
+
+                pares(32, 321);
+
+            //usando while
+                function pares(x, y) {
+                    var i = x
+                    while(i <= y) {
+                        if(i % 2 === 0) {
+                            console.log(i);
+                        };
+                        i++
+                    };
+                }
+
+                pares(32, 321);
+    </script>
+</body>
+</html>

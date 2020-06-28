@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <script>
+        //exercicio1
+            var endereco = {
+                    rua: "Rua dos Pinheiros",
+                    numero: 1293,
+                    bairro: "Centro",
+                    cidade: "São Paulo",
+                    uf: "SP"
+                };
+
+            function home() {
+                return(
+                    "O usuário mora em " + 
+                    endereco.cidade + 
+                    " / " + 
+                    endereco.uf + 
+                    ", no bairro " + 
+                    endereco.bairro + 
+                    ", na rua " + 
+                    endereco.rua + 
+                    " com número " + 
+                    endereco.numero + 
+                    "."
+                );
+            }
+
+            console.log(home());
+
+            //primeira maneira que pensei em fazer
+                function lar(rua, numero, bairro, cidade, uf) {
+                    return(
+                        "O usuário mora em " + 
+                        cidade + 
+                        " / " + 
+                        uf + 
+                        ", no bairro " + 
+                        bairro + 
+                        ", na rua " + 
+                        rua + 
+                        " com número " + 
+                        numero + 
+                        "."
+                    );
+                }
+
+                var texto = lar(
+                    endereco.rua, 
+                    endereco.numero, 
+                    endereco.bairro, 
+                    endereco.cidade, 
+                    endereco.uf
+                );
+                    
+                console.log(texto);
+    </script>
+</body>
+</html>
