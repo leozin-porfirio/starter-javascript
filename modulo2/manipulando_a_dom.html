@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <!--eventos inline-->
+        <div>
+            <button onmouseover="mostraAlerta()">Passe o Mouse</button>
+            <button onclick="mostraAlerta()">Me Prescione</button>
+            <input onkeypress="mostraAlerta()">
+        </div>
+
+    <!--trabalhando com a DOM-->
+        <div>
+            <input type="text" name="nome" id="nome" class="nome">
+            <button class="botao">Adicionar</button>
+        </div>
+
+    <!--lidando com elementos-->
+        <div id="app">
+            <input id="nomes">
+        </div>
+
+    <!--alterando estilos-->
+        <div id="estilo">
+            <div class="box"></div>
+        </div>
+
+        <script>
+            //eventos inline
+                function mostraAlerta() {
+                    alert('Sou um alerta!');
+                }
+
+            //trabalhando com a DOM
+                //var inputElement = document.getElementById('nome');
+                //var inputElement = document.getElementsByTagName('input')[1];
+                //var inputElement = document.getElementsByClassName('nome');
+                //var inputElement = document.querySelector('div#app input');
+                //var inputElement = document.querySelector('input[name=nome]');
+                //var inputElement = document.querySelectorAll('input');
+                
+                var inputElement = document.querySelector('input[name=nome]');
+                var btnElement = document.querySelector('button.botao');
+
+                btnElement.onclick = function() {
+                    var text = inputElement.value
+                    alert(text);
+                }
+
+            //lidando com elementos
+                var linkElement = document.createElement('a');
+                linkElement.setAttribute('href', 'http://rocketseat.com.br');
+                linkElement.setAttribute('title', 'Site Rocketseat');
+                linkElement.setAttribute('target', '_blank');
+
+                var textElement = document.createTextNode('Site Rocketseat');
+                linkElement.appendChild(textElement);
+                
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(linkElement);
+
+                var inputElements = document.querySelector('#nomes');
+                containerElement.removeChild(inputElements);
+
+            //alternando estilos
+                var boxElement = document.querySelector('.box');
+                boxElement.style.width = '10px';
+                boxElement.style.height = '10px';
+                boxElement.style.backgroundColor = 'red';
+
+        </script>
+</body>
+</html>
